@@ -15,7 +15,7 @@ limitations under the License.
 -->
 <template>
   <div>
-    <q-card class="v-step-1">
+    <q-card>
       <q-card-section>
         <div class="text-h6 text-align:left">
           {{ this.endpointReference ? 'Edit Endpoint' : 'Create New Endpoint' }}
@@ -27,7 +27,7 @@ limitations under the License.
             v-model="shownEndpoint.endpointIdentifier"
             ref="endpoint"
             filled
-            class="col v-step-3"
+            class="col v-step-1"
             :rules="[reqInteger, reqPosInt, reqUniqueEndpoint]"
             min="0"
           />
@@ -66,14 +66,11 @@ limitations under the License.
               ref="network"
               outlined
               filled
+              class="col v-step-3"
               stack-label
               :rules="[reqInteger, reqPosInt]"
               min="0"
             >
-              <q-tooltip>
-                An endpoint can be assigned a network id that corresponds to
-                which network it is on.
-              </q-tooltip>
             </q-input>
 
             <q-input

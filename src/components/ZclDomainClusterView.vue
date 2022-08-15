@@ -128,6 +128,7 @@ limitations under the License.
               props.row.manufacturerCode
                 ? asHex(props.row.manufacturerCode, 4)
                 : '---'
+              /* incorporate one step here */
             }}
           </q-td>
           <q-td key="enable" :props="props">
@@ -165,7 +166,7 @@ limitations under the License.
         <q-card-section>
           <div class="text-h6">Enable All Clusters</div>
           Enabling all clusters may cause the ZCL configuration to go into an
-          invalid state. Are you sure want to enable all clusters?
+          invalid state. Are you sure you want to enable all clusters?
         </q-card-section>
         <q-card-actions>
           <q-btn label="Cancel" v-close-popup class="col" />

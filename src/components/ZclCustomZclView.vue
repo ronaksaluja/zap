@@ -27,7 +27,7 @@ limitations under the License.
           <q-btn
             color="primary"
             icon="add"
-            class="v-step-16"
+            class="v-step-17"
             @click="browseForFile()"
           />
         </div>
